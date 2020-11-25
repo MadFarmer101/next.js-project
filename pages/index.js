@@ -2,11 +2,9 @@ import React, { Component } from "react";
 import Link from "next/link";
 import Router from "next/router";
 
-
 class IndexPage extends Component {
-
   static async getInitialProps() {
-    return {appName: "Super App"}
+    return { appName: "Super App" };
   }
 
   render() {

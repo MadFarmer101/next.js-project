@@ -1,14 +1,18 @@
-import React from 'react';
+import React from "react";
 
-import User from "../../components/User"
+import User from "../../components/User";
 
-const authIndexPage = () => {
+const authIndexPage = (props) => {
   return (
     <div>
-      <h1>The Auth Index Page</h1>
-      <User name="Mad" age={36}/>
+      <h1>The Auth Index Page of {props.appName}</h1>
+      <User name="Mad" age={36} />
     </div>
   );
-}
+};
+
+authIndexPage.getInitialProps = () => {
+  return { appName: "Super App (Auth)" };
+};
 
 export default authIndexPage;
